@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun Div</title>
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="{{ url_for('styles_page', filename='solarstyles.css') }}">
+</head>
+<body>
+
+<div class="solarsystem-container">
+     
+    <div id="sun-container">
+        <div id="sun"> <div id="timer"></div>  </div>
+    </div>
+    
+
+    </div>
+    <div class="planet" id="mercury">
+    </div>
+    <div class="planet" id="venus">
+    </div>
+    <div class="planet" id="earth">
+        <div class="moon" id="moon-earth"></div>
+    </div>
+    <div class="planet" id="mars">
+        <div class="moon" id="phobos-mars"></div>
+        <div class="moon" id="deimos-mars"></div>
+    </div>
+    <div class="planet" id="jupiter">
+        <div class="jupiter-ring"></div>
+        <div class="moon" id="io-jupiter"></div>
+        <div class="moon" id="europa-jupiter"></div>
+        <div class="moon" id="ganymede-jupiter"></div>
+        <div class="moon" id="callisto-jupiter"></div>
+    </div>
+    <div class="planet" id="saturn">
+        <div class="saturn-ring"></div>
+        <div class="moon" id="dione-saturn"></div>
+        <div class="moon" id="rhea-saturn"></div>
+        <div class="moon" id="titan-saturn"></div>
+        <div class="moon" id="iapetus-saturn"></div>   
+    </div>
+    <div class="planet" id="uranus">
+        <div class="uranus-ring"></div>
+        <div class="moon-container">
+            <div class="moon" id="ariel-uranus"></div> 
+            <div class="moon" id="umbriel-uranus"></div>
+            <div class="moon" id="titania-uranus"></div>
+            <div class="moon" id="oberon-uranus"></div>
+        </div>
+
+    </div>
+    <div class="planet" id="neptune">
+        <div class="moon" id="triton-neptune"></div>
+    </div>
+</div>
+    <script>
+    document.body.style.transform = 'scale(0.20)';
+    let seconds = 0;
+  const timerElement = document.getElementById('timer');
+
+  function updateTimer() {
+    seconds++;
+    timerElement.textContent = seconds + ' days';
+  }
+  setInterval(updateTimer, 1000);
+
+    </script>
+
+
+</body>
+</html>

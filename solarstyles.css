@@ -1,0 +1,507 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Hide overflow to prevent horizontal scrolling */
+    background-color:black;
+}
+
+#timer {
+  color: #000000;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 52px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;  
+}
+
+.solarsystem-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  overflow: hidden;
+  transform-origin: top left;
+  transition: transform 0.2s ease-out;
+}
+
+#sun-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  top: 50%;
+}
+
+#sun {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.planet {
+  animation-delay: -1000s;
+}
+
+.moon {
+    width: 5px;
+    height: 5px;
+    background-color: #ffffff; 
+    border-radius: 50%;
+    position: absolute;
+}
+
+#mercury {
+    width: 9.5px;
+    height: 9.5px;
+    background-color: gray;
+    border-radius: 50%;
+    position: absolute;
+    animation: orbitmercury 88s linear infinite;
+}
+
+#venus {
+    width: 23.75px;
+    height: 23.75px;
+    background-color: orange;
+    border-radius: 50%;
+    position: absolute;
+    animation: orbitvenus 225s linear infinite; /* Adjust the duration of the orbit as needed */
+}
+
+#earth {
+    width: 25px;
+    height: 25px;
+    background-color: #4CAF50; /* Green color for Earth */
+    border-radius: 50%;
+    position: absolute;
+    animation: orbitearth 365s linear infinite; /* Adjust the duration of the orbit as needed */
+}
+
+#moon-earth {
+    width: 6.75px;
+    height: 6.75px;
+    background-color: #ffffff; 
+    border-radius: 50%;
+    position: absolute;
+    animation: moon-orbit 1s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+}
+
+#mars {
+    width: 13.25px;
+    height: 13.25px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: orbitmars 687s linear infinite;
+}
+
+#phobos-mars {
+    width: 5px;
+    height: 5px;
+    background-color: #ffffff; 
+    border-radius: 50%;
+    position: absolute;
+    animation: phobos-orbit 1s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+}
+
+#deimos-mars {
+    width: 5px;
+    height: 5px;
+    background-color: #ffffff; 
+    border-radius: 50%;
+    position: absolute;
+    animation: deimos-orbit 1.5s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+}
+
+#jupiter {
+    width: 74.25px;
+    height: 74.25px;
+    background-color: #DAA520; /* Goldenrod color for Jupiter */
+    border-radius: 50%;
+    position: absolute;
+    animation: orbitjupiter 4333s linear infinite;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.jupiter-ring {
+  width: 105px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: circle(55% at 50% 0%);
+  top: 25px;
+}
+
+.jupiter-ring::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgb(124, 117, 117);
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#io-jupiter {
+    animation: io-orbit 2.7s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+}
+#europa-jupiter {
+    animation: europa-orbit 3.55s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+}
+
+#ganymede-jupiter {
+
+    animation: ganymede-orbit 7.15s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+}
+
+#callisto-jupiter {
+    animation: callisto-orbit 16.7s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+}
+
+#saturn {
+    width: 58.5px;
+    height: 58.5px;
+    background-color: #FFD700; /* Gold color for Saturn */
+    border-radius: 50%;
+    position: absolute;
+    animation: orbitsaturn 10759s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.saturn-ring {
+  width: 100px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: circle(70% at 50% 0%);
+  top: 5px;
+  transform: rotate(45deg);
+}
+
+.saturn-ring::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgb(124, 117, 117);
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#dione-saturn {
+    animation: dione-orbit 2.74s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+}
+#rhea-saturn {
+    animation: rhea-orbit 4.52s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+}
+#titan-saturn {
+    animation: titan-orbit 15.95s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+}
+#iapetus-saturn {
+    animation: iapetus-orbit 79.33s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+}
+ 
+#uranus {
+    width: 45.5px;
+    height: 45.5px;
+    background-color: #00BFFF; /* Deep Sky Blue color for Uranus */
+    border-radius: 50%;
+    position: absolute;
+    animation: orbituranus 30687s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uranus-ring {
+  width: 80px;
+  height: 80px;
+  border: 4px solid white;
+  border-radius: 70%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uranus-ring::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgb(124, 117, 117);
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#ariel-uranus {
+    animation: ariel-orbit 2.5s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+}
+#umbriel-uranus {
+    animation: umbriel-orbit 4.1s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+}
+#titania-uranus {
+    animation: titania-orbit 8.7s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+}
+#oberon-uranus {
+    animation: oberon-orbit 13.5s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+}
+
+#neptune {
+    width: 44.5px;
+    height: 44.5px;
+    background-color: #0a869c; /* Navy color for Neptune */
+    border-radius: 50%;
+    position: absolute;
+    animation: orbitneptune 60190s linear infinite;
+}
+
+
+#triton-neptune {
+    animation: triton-orbit 9.33s linear infinite; /* Adjust the duration of the orbit as needed */
+}
+
+@keyframes orbitmercury {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(250px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(250px) rotate(-360deg);
+    }
+}
+@keyframes orbitvenus {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(372px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(372px) rotate(-360deg);
+    } 
+}
+@keyframes orbitearth {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(530px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(530px) rotate(-360deg);
+    }
+}
+@keyframes moon-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(80px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(80px) rotate(-360deg);
+    }
+}  
+@keyframes orbitmars {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(780px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(780px) rotate(-360deg);
+    }
+}
+@keyframes phobos-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(20px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(20px) rotate(-360deg);
+    }
+}
+@keyframes deimos-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(80px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(80px) rotate(-360deg);
+    }
+}
+@keyframes orbitjupiter {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(1400px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(1400px) rotate(-360deg);
+    }
+}
+@keyframes io-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(140px) rotate(0deg);
+    }
+    to {
+      transform: translate(-110%, -110%) rotate(360deg) translateX(140px) rotate(-360deg);
+    }
+}
+@keyframes europa-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(160px) rotate(0deg);
+    }
+    to {
+      transform: translate(-110%, -110%) rotate(360deg) translateX(160px) rotate(-360deg);
+    }
+}
+@keyframes ganymede-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    to {
+      transform: translate(-110%, -110%) rotate(360deg) translateX(200px) rotate(-360deg);
+    }
+}
+@keyframes callisto-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(220px) rotate(0deg);
+    }
+    to {
+      transform: translate(-110%, -110%) rotate(360deg) translateX(220px) rotate(-360deg);
+    }
+}  
+@keyframes orbitsaturn {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(2300px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(2300px) rotate(-360deg);
+    }
+}
+@keyframes dione-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    to {
+      transform: translate(-110%, -110%) rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}
+@keyframes rhea-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    to {
+      transform: translate(-110%, -110%) rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
+@keyframes titan-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    to {
+      transform: translate(-110%, -110%) rotate(360deg) translateX(200px) rotate(-360deg);
+    }
+}
+@keyframes iapetus-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(250px) rotate(0deg);
+    }
+    to {
+      transform: translate(-110%, -110%) rotate(360deg) translateX(250px) rotate(-360deg);
+    }
+}
+@keyframes orbituranus {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(4322px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(4322px) rotate(-360deg);
+    }
+}
+@keyframes ariel-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(110px) rotate(0deg);
+    }
+    to {
+      transform: translate(-110%, -110%) rotate(360deg) translateX(120px) rotate(-360deg);
+    }
+}
+@keyframes umbriel-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(130px) rotate(0deg);
+    }
+    to {
+      transform: translate(-110%, -110%) rotate(360deg) translateX(140px) rotate(-360deg);
+    }
+}
+@keyframes oberon-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(140px) rotate(0deg);
+    }
+    to {
+      transform: translate(-110%, -110%) rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
+@keyframes titania-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(170px) rotate(0deg);
+    }
+    to {
+      transform: translate(-110%, -110%) rotate(360deg) translateX(190px) rotate(-360deg);
+    }
+}
+@keyframes oberon-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    to {
+      transform: translate(-110%, -110%) rotate(360deg) translateX(200px) rotate(-360deg);
+    }
+}
+@keyframes orbitneptune {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(6105px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(6105px) rotate(-360deg);
+    }
+}
+@keyframes triton-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    to {
+      transform: translate(-110%, -110%) rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}
