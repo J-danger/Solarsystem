@@ -4,7 +4,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    overflow: hidden; /* Hide overflow to prevent horizontal scrolling */
+    overflow: hidden; 
     background-color:black;
 }
 
@@ -77,16 +77,16 @@ body {
     background-color: orange;
     border-radius: 50%;
     position: absolute;
-    animation: orbitvenus 225s linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: orbitvenus 225s linear infinite; /* Adjust orbit */
 }
 
 #earth {
     width: 25px;
     height: 25px;
-    background-color: #4CAF50; /* Green color for Earth */
+    background-color: #4CAF50; 
     border-radius: 50%;
     position: absolute;
-    animation: orbitearth 365s linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: orbitearth 365s linear infinite; /* Adjust orbit */
 }
 
 #moon-earth {
@@ -95,7 +95,7 @@ body {
     background-color: #ffffff; 
     border-radius: 50%;
     position: absolute;
-    animation: moon-orbit 1s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: moon-orbit 1s reverse linear infinite; /* Adjust orbit */
 }
 
 #mars {
@@ -104,7 +104,7 @@ body {
     background-color: red;
     border-radius: 50%;
     position: absolute;
-    animation: orbitmars 687s linear infinite;
+    animation: orbitmars 687s linear infinite; /* Adjust orbit */
 }
 
 #phobos-mars {
@@ -113,7 +113,7 @@ body {
     background-color: #ffffff; 
     border-radius: 50%;
     position: absolute;
-    animation: phobos-orbit 1s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: phobos-orbit 1s reverse linear infinite; /* Adjust orbit */
 }
 
 #deimos-mars {
@@ -122,13 +122,13 @@ body {
     background-color: #ffffff; 
     border-radius: 50%;
     position: absolute;
-    animation: deimos-orbit 1.5s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: deimos-orbit 1.5s reverse linear infinite; /* Adjust orbit */
 }
 
 #jupiter {
     width: 74.25px;
     height: 74.25px;
-    background-color: #DAA520; /* Goldenrod color for Jupiter */
+    background-color: #DAA520; 
     border-radius: 50%;
     position: absolute;
     animation: orbitjupiter 4333s linear infinite;
@@ -169,25 +169,25 @@ body {
 }
 
 #io-jupiter {
-    animation: io-orbit 2.7s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: io-orbit 2.7s reverse linear infinite; /* Adjust orbit */
 }
 #europa-jupiter {
-    animation: europa-orbit 3.55s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: europa-orbit 3.55s reverse linear infinite; /* Adjust orbit */
 }
 
 #ganymede-jupiter {
 
-    animation: ganymede-orbit 7.15s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: ganymede-orbit 7.15s reverse linear infinite; /* Adjust orbit */
 }
 
 #callisto-jupiter {
-    animation: callisto-orbit 16.7s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: callisto-orbit 16.7s reverse linear infinite; /* Adjust orbit */
 }
 
 #saturn {
     width: 58.5px;
     height: 58.5px;
-    background-color: #FFD700; /* Gold color for Saturn */
+    background-color: #FFD700; 
     border-radius: 50%;
     position: absolute;
     animation: orbitsaturn 10759s linear infinite;
@@ -227,22 +227,22 @@ body {
 }
 
 #dione-saturn {
-    animation: dione-orbit 2.74s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: dione-orbit 2.74s reverse linear infinite; /* Adjust orbit */
 }
 #rhea-saturn {
-    animation: rhea-orbit 4.52s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: rhea-orbit 4.52s reverse linear infinite; /* Adjust orbit */
 }
 #titan-saturn {
-    animation: titan-orbit 15.95s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: titan-orbit 15.95s reverse linear infinite; /* Adjust orbit */
 }
 #iapetus-saturn {
-    animation: iapetus-orbit 79.33s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: iapetus-orbit 79.33s reverse linear infinite; /* Adjust orbit */
 }
  
 #uranus {
     width: 45.5px;
     height: 45.5px;
-    background-color: #00BFFF; /* Deep Sky Blue color for Uranus */
+    background-color: #00BFFF; 
     border-radius: 50%;
     position: absolute;
     animation: orbituranus 30687s linear infinite;
@@ -279,22 +279,22 @@ body {
 }
 
 #ariel-uranus {
-    animation: ariel-orbit 2.5s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: ariel-orbit 2.5s reverse linear infinite; /* Adjust orbit */
 }
 #umbriel-uranus {
-    animation: umbriel-orbit 4.1s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: umbriel-orbit 4.1s reverse linear infinite; /* Adjust orbit */
 }
 #titania-uranus {
-    animation: titania-orbit 8.7s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: titania-orbit 8.7s reverse linear infinite; /* Adjust orbit */
 }
 #oberon-uranus {
-    animation: oberon-orbit 13.5s reverse linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: oberon-orbit 13.5s reverse linear infinite; /* Adjust orbit */
 }
 
 #neptune {
     width: 44.5px;
     height: 44.5px;
-    background-color: #0a869c; /* Navy color for Neptune */
+    background-color: #0a869c; 
     border-radius: 50%;
     position: absolute;
     animation: orbitneptune 60190s linear infinite;
@@ -302,7 +302,7 @@ body {
 
 
 #triton-neptune {
-    animation: triton-orbit 9.33s linear infinite; /* Adjust the duration of the orbit as needed */
+    animation: triton-orbit 9.33s linear infinite; /* Adjust orbit */
 }
 
 @keyframes orbitmercury {
