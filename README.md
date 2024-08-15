@@ -1,2 +1,2 @@
 # Solarsystem
-Solar System project
+Learning static CSS animations  
